@@ -1,7 +1,7 @@
 // CONFIGURATION ENGINE ARCHITECTURE
 const API_BASE = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost'
   ? "http://localhost:5000/api"
-  : "https://YOUR-RAILWAY-BACKEND-URL-GOES-HERE.up.railway.app/api"; // Swap this placeholder on live server sync
+  : "https://hmbackend-production-db1a.up.railway.app/api"; // Swap this placeholder on live server sync
 
 document.getElementById('attendance-date').valueAsDate = new Date();
 
