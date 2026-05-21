@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O'quv Markazi Analitika Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">📈 Markaz <span>Data Hub</span> <div class="badge-os">Open-Source Platform</div></div>
+    <a href="admin.html" class="btn btn-primary">Boshqaruv Tizimi (Admin)</a>
+  </header>
+
+  <main class="container">
+    <!-- Analytical Pulse Counter Matrix -->
+    <section class="grid grid-4" id="metric-pulse-row">
+      <div class="card stat-card"><h3>Xonalar Yuklamasi</h3><p id="stat-occupancy">0%</p></div>
+      <div class="card stat-card"><h3>Faol Akademik Guruhlar</h3><p id="stat-groups">0 ta</p></div>
+      <div class="card stat-card"><h3>Faol Professor-O'qituvchilar</h3><p id="stat-teachers">0 nafar</p></div>
+      <div class="card stat-card"><h3>Haftalik Umumiy Darslar</h3><p id="stat-lessons">0 ta</p></div>
+    </section>
+
+    <!-- Visual Infrastructure Heat Matrix -->
+    <section class="card">
+      <h2>🏫 Infratuzilma xonalari bandlik ko'rsatkichlari</h2>
+      <div id="occupancy-container" class="grid grid-3"></div>
+    </section>
+
+    <!-- High-Performance Global Filter Core -->
+    <section class="card">
+      <h2>🔍 Global filtrlash va ma'lumotlarni saralash</h2>
+      <div class="grid grid-4">
+        <div>
+          <label>Hafta Kuni</label>
+          <select id="filter-day">
+            <option value="">Barcha kunlar</option>
+            <option value="Dushanba">Dushanba</option>
+            <option value="Seshanba">Seshanba</option>
+            <option value="Chorshanba">Chorshanba</option>
+            <option value="Payshanba">Payshanba</option>
+            <option value="Juma">Juma</option>
+            <option value="Shanba">Shanba</option>
+          </select>
+        </div>
+        <div>
+          <label>O'qituvchi</label>
+          <select id="filter-teacher"><option value="">Barcha o'qituvchilar</option></select>
+        </div>
+        <div>
+          <label>Guruh Darajasi (Level)</label>
+          <select id="filter-level">
+            <option value="">Barcha darajalar</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Elementary">Elementary</option>
+            <option value="Pre-Intermediate">Pre-Intermediate</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+            <option value="IELTS">IELTS</option>
+            <option value="CEFR">CEFR</option>
+          </select>
+        </div>
+        <div>
+          <label>Infratuzilma Xonasi</label>
+          <select id="filter-room-table"><option value="">Barcha xonalar</option></select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Matrix Rendering Channel -->
+    <section class="card text-scroll">
+      <h2>📅 Interaktiv dars va vaqt taqsimoti jadvali</h2>
+      <table>
+        <thead><tr id="table-header"></tr></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+
+    <!-- Side Intelligence Blocks -->
+    <section class="grid grid-2">
+      <div class="card">
+        <h2>💡 O'qituvchilar bo'sh vaqt diagnostikasi</h2>
+        <div style="margin-bottom: 12px;">
+          <select id="free-teacher-select"><option value="">O'qituvchini tanlang...</option></select>
+        </div>
+        <div id="free-slots-output" style="display:flex; flex-direction:column; gap:8px;"></div>
+      </div>
+
+      <div class="card">
+        <h2>📚 Kurs materiallari va adabiyotlar katalogi</h2>
+        <ul id="groups-list" class="list-group"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
